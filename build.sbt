@@ -15,7 +15,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
   "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
   "com.github.music-of-the-ainur" %% "almaren-framework" % "0.2.3-2-4" % "provided",
-  "com.lucidworks.spark" % "spark-solr" % "4.0.0" % "provided" excludeAll(
+  "it.agilelab.bigdata.spark" % "spark-solr" % "3.8.1" % "provided" excludeAll(
     ExclusionRule(organization = "org.apache.hadoop"),
     ExclusionRule(organization = "org.apache.spark")
   ),
@@ -23,7 +23,7 @@ libraryDependencies ++= Seq(
   "commons-httpclient" % "commons-httpclient" % "3.1",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   "org.scalatest" %% "scalatest" % "3.0.5" % "test",
-  "com.lucidworks.spark" % "spark-solr" % "3.7.1" % "test" excludeAll(
+  "it.agilelab.bigdata.spark" % "spark-solr" % "3.8.1" % "test" excludeAll(
     ExclusionRule(organization = "org.apache.hadoop"),
     ExclusionRule(organization = "org.apache.spark")
   )
