@@ -2,9 +2,10 @@ ThisBuild / name := "solr.almaren"
 ThisBuild / organization := "com.github.music-of-the-ainur"
 
 lazy val scala211 = "2.11.12"
+lazy val scala212 = "2.12.10"
 
-crossScalaVersions := Seq(scala211)
-ThisBuild / scalaVersion := scala211
+crossScalaVersions := Seq(scala211,scala212)
+ThisBuild / scalaVersion := scala212
 
 val sparkVersion = "2.4.4"
 
@@ -14,7 +15,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
   "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
   "com.github.music-of-the-ainur" %% "almaren-framework" % "0.2.3-2-4" % "provided",
-  "com.lucidworks.spark" % "spark-solr" % "3.7.1" % "provided" excludeAll(
+  "com.lucidworks.spark" % "spark-solr" % "4.0.0" % "provided" excludeAll(
     ExclusionRule(organization = "org.apache.hadoop"),
     ExclusionRule(organization = "org.apache.spark")
   ),
