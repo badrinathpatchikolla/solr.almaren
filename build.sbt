@@ -18,20 +18,23 @@ libraryDependencies ++= Seq(
   "it.agilelab.bigdata.spark" % "spark-solr" % "3.8.1" % "provided" excludeAll(
     ExclusionRule(organization = "org.apache.hadoop"),
     ExclusionRule(organization = "org.apache.spark"),
-    ExclusionRule(organization = "com.fasterxml.jackson.core")
+    ExclusionRule(organization = "com.fasterxml.jackson.module"),
+    ExclusionRule(organization = "com.fasterxml.jackson.core"),
+    ExclusionRule(organization = "com.fasterxml.jackson.databind")
   ),
   // Mising library from spark-solr connector
   "commons-httpclient" % "commons-httpclient" % "3.1",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   "org.scalatest" %% "scalatest" % "3.0.5" % "test",
-  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.9.9",
-  "com.fasterxml.jackson.core" % "jackson-core" % "2.9.9",
-  "com.fasterxml.jackson.core" % "jackson-databind" % "2.9.9",
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.13.0",
+  "com.fasterxml.jackson.core" % "jackson-core" % "2.13.0",
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.13.0",
   "it.agilelab.bigdata.spark" % "spark-solr" % "3.8.1" % "test" excludeAll(
     ExclusionRule(organization = "org.apache.hadoop"),
     ExclusionRule(organization = "org.apache.spark"),
     ExclusionRule(organization = "com.fasterxml.jackson.module"),
-    ExclusionRule(organization = "com.fasterxml.jackson.core")
+    ExclusionRule(organization = "com.fasterxml.jackson.core"),
+    ExclusionRule(organization = "com.fasterxml.jackson.databind")
   )
 )
 
