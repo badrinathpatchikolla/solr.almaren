@@ -22,6 +22,7 @@ libraryDependencies ++= Seq(
   ),
   // Mising library from spark-solr connector
   "commons-httpclient" % "commons-httpclient" % "3.1",
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.9.9",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   "org.scalatest" %% "scalatest" % "3.0.5" % "test",
   "it.agilelab.bigdata.spark" % "spark-solr" % "3.8.1" % "test" excludeAll(
