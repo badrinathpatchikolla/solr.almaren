@@ -17,7 +17,8 @@ libraryDependencies ++= Seq(
   "com.github.music-of-the-ainur" %% "almaren-framework" % "0.2.3-2-4" % "provided",
   "it.agilelab.bigdata.spark" % "spark-solr" % "3.8.1" % "provided" excludeAll(
     ExclusionRule(organization = "org.apache.hadoop"),
-    ExclusionRule(organization = "org.apache.spark")
+    ExclusionRule(organization = "org.apache.spark"),
+    ExclusionRule(organization = "com.fasterxml.jackson.module")
   ),
   // Mising library from spark-solr connector
   "commons-httpclient" % "commons-httpclient" % "3.1",
@@ -25,7 +26,8 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.5" % "test",
   "it.agilelab.bigdata.spark" % "spark-solr" % "3.8.1" % "test" excludeAll(
     ExclusionRule(organization = "org.apache.hadoop"),
-    ExclusionRule(organization = "org.apache.spark")
+    ExclusionRule(organization = "org.apache.spark"),
+    ExclusionRule(organization = "com.fasterxml.jackson.module")
   )
 )
 
